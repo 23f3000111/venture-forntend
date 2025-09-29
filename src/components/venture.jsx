@@ -6,7 +6,7 @@ import "./Venture.css"; // Import custom styles
 
 function Venture() {
   const [search, setSearch] = useState("");
-  const { data, loading } = useFetch("https://venture-backend-98iovy5o4-rishikeshs-projects-f92f7a7f.vercel.app/venture");
+  const { data, loading } = useFetch("https://venture-backend-gto692kw5-rishikeshs-projects-f92f7a7f.vercel.app/venture");
 
   const filterVenture =
     search === ""
@@ -82,5 +82,6 @@ function Venture() {
 }
 
 export default Venture;
+
 
 
