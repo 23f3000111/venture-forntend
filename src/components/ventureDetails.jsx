@@ -4,7 +4,7 @@ import "./VentureDetails.css"; // Custom styles
 
 export default function VentureDetails() {
   const { id } = useParams();
-  const { data, loading } = useFetch("http://localhost:3000/venture");
+  const { data, loading } = useFetch("https://venture-backend-l22mgv2og-rishikeshs-projects-f92f7a7f.vercel.app/venture");
   const details = data?.find((d) => d._id === id);
 
   return (
@@ -107,3 +107,4 @@ export default function VentureDetails() {
     </div>
   );
 }
+
