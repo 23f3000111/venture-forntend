@@ -5,7 +5,13 @@ const useFetch = (url, initialData) => {
   const [error, setError] = useState(null);
   useEffect(() => {
     setLoading(true);
-    fetch(url)
+    fetch(url, {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json"
+    // no unnecessary custom headers
+  }
+})
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -16,3 +22,4 @@ const useFetch = (url, initialData) => {
   return { data, loading, error };
 };
 export default useFetch;
+
